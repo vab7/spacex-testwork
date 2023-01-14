@@ -1,0 +1,40 @@
+.nav_links {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  background-color: black;
+  align-items: end;
+  gap: 10px;
+  transform: translate(0, 0);
+  transition: all 0.4s;
+  padding: 75px 20px 0 0;
+  z-index: 2;
+}
+
+.nav_close {
+  transform: translate(100%, 0);
+}
+
+@media screen and (min-width: 992px) {
+  .nav_links {
+    width: 100%;
+    position: static;
+    display: flex;
+    transform: translate(0, 0) !important;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    gap: 20px;
+    justify-content: end;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav_links {
+    gap: 30px;
+  }
+}

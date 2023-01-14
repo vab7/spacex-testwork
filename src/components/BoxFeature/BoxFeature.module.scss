@@ -1,0 +1,106 @@
+@import "../../styles/colors";
+
+$box_shadow: rgba(255, 255, 255, 0.05);
+$box_shadow2: rgba(255, 255, 255, 0.035);
+
+@mixin gradient_two_colors($deg, $color1, $color2) {
+  background: -webkit-linear-gradient($deg, $color1 40%, $color2);
+  background: -moz-linear-gradient($deg, $color1 40%, $color2);
+  background: linear-gradient($deg, $color1 40%, $color2);
+}
+
+@mixin gradient_three_colors($deg) {
+  background: -webkit-linear-gradient(
+    $deg,
+    $box_shadow2,
+    transparent,
+    $box_shadow2
+  );
+  background: -moz-linear-gradient(
+    $deg,
+    $box_shadow2,
+    transparent,
+    $box_shadow2
+  );
+  background: linear-gradient($deg, $box_shadow2, transparent, $box_shadow2);
+}
+
+$size992: 150px;
+$size1200: 170px;
+$size1400: 195px;
+
+.box_feature {
+  width: $size992;
+  height: $size992;
+}
+
+@media screen and (min-width: 1200px) {
+  .box_feature {
+    width: $size1200;
+    height: $size1200;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .box_feature {
+    width: $size1400;
+    height: $size1400;
+  }
+}
+
+.box_gradient,
+.box_default {
+  color: white;
+}
+
+.top_text {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.box_year {
+  font-size: 18px;
+}
+
+.strong_title {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.bottom_text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: -12px;
+}
+
+@media screen and (min-width: 992px) {
+  .box_gradient,
+  .box_default {
+    color: transparent !important;
+    background-clip: text;
+  }
+
+  .box_gradient {
+    background-image: linear-gradient(90deg, white, white, $color-1);
+  }
+
+  .box_default {
+    background-image: linear-gradient(90deg, #cacaca, #a5a5a5);
+  }
+
+  .box_item_1 {
+    @include gradient_two_colors(135deg, transparent, $box_shadow);
+  }
+
+  .box_item_2 {
+    @include gradient_two_colors(225deg, transparent, $box_shadow);
+  }
+
+  .box_item_3 {
+    @include gradient_two_colors(45deg, transparent, $box_shadow);
+  }
+
+  .box_item_4 {
+    @include gradient_two_colors(315deg, transparent, $box_shadow);
+  }
+}

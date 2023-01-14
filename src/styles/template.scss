@@ -1,0 +1,97 @@
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-bg;
+}
+
+.wrapper {
+  background: $color-bg;
+}
+
+.color-1 {
+  color: $color-1;
+}
+
+.color-header {
+  background: $color-header;
+}
+
+.color-bg {
+  background: $color-bg;
+}
+
+li {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.content-c {
+  display: flex;
+  justify-content: center;
+}
+
+.align-c {
+  display: flex;
+  align-items: center;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+svg {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.line {
+  width: 100%;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.relative {
+  position: relative;
+}
+
+a {
+  font-size: 14px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}

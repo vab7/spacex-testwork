@@ -1,0 +1,23 @@
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: transparent;
+  border: none;
+  padding: 20px;
+}
+
+.bar {
+  width: 20px;
+  height: 1.5px;
+  background: white;
+  transition: 0.4s;
+}
+
+#bar_1 {
+  transform: translate(0, 4px) rotate(45deg);
+}
+
+#bar_3 {
+  transform: translate(0, -4px) rotate(-45deg);
+}

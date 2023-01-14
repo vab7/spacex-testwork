@@ -1,0 +1,41 @@
+.content_feature {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.content_box {
+  gap: 10px;
+  margin: 70px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content_feature {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 310px;
+    height: 100%;
+    right: -25px;
+    left: auto;
+  }
+
+  .content_box {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content_feature {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content_feature {
+    width: 400px;
+  }
+}

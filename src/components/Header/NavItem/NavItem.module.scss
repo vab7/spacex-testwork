@@ -1,0 +1,44 @@
+.nav_item {
+  position: relative;
+  padding: 5px 0 5px 0;
+  margin-left: 150px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+
+  a {
+    color: #eee;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav_item {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .link_line {
+    display: none;
+  }
+}
+.nav_item {
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    right: 0;
+    left: initial;
+    height: 1px;
+    background-color: #aaa;
+    transition: width 0.3s;
+  }
+
+  a:hover {
+    color: #aaa;
+    &::after {
+      width: 100%;
+      left: 0;
+      right: initial;
+    }
+  }
+}
